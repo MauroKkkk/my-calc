@@ -15,7 +15,7 @@ function atualizarOperacao(btn){
     const display = document.getElementById('display');
     operador = btn.value;
     valor1 = parseInt(display.value);
-    display.value = '0';
+    display.value = valor1+operador;
 }
 
 function calcularOperacao(){
