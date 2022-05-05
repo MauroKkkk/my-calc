@@ -1,1 +1,30 @@
-body { background-color: lightblue; }
+body{
+    background-color: gray;
+    background-image: url(/img/ney.jpg);   
+    background-size: cover;
+    background-position-y: 0;
+    background-repeat: no-repeat;
+    margin: auto;
+    text-align: center;
+    text-size-adjust: auto;
+}
+.botoes{
+    width: 98%;
+    height: 97vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type=button]{
+    text-size-adjust: 500px;
+    border-radius: 90;
+    color: black;
+    aspect-ratio: 15;
+    width: 20%;
+}
+
+#display{
+    width: 400px;
+    height: 50px;
+}
