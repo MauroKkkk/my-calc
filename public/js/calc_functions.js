@@ -15,7 +15,7 @@ function atualizarOperacao(btn){
     const display = document.getElementById('display');
     operador = btn.value;
     valor1 = parseInt(display.value);
-    display.value = valor1+operador;
+    display.value = valor1;
 }
 
 function calcularOperacao(){
@@ -29,4 +29,11 @@ function calcularOperacao(){
 function manipularTeclado(){
     if(/[0-9]/.test(event.key))
         atualizarDisplay({value: event.key});
+}
+function raizQuadrada(){
+    const raiz = document.getElementById('display');
+    const resultado = Math.sqrt(display.value);
+    display.value = resultado;
+}
+function elevadoA(){
 }
