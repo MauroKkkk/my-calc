@@ -10,18 +10,21 @@ function limparDisplay(){
 }
 
 var operador = ''
-var valor1 = 0
+var valor1 =  0
+var tela = 0
 function atualizarOperacao(btn){
     const display = document.getElementById('display');
     operador = btn.value;
-    valor1 = parseInt(display.value);
+    operador = parseFloat(operador);
+    tela = parseFloat(display.value+operador);
+    valor1 = tela;
     display.value = valor1;
 }
 
 function calcularOperacao(){
     const display = document.getElementById('display');
-    const valor2 = parseInt(display.value);
-    valor1 = eval(valor1+operador+valor2);
+    const valor2 = parseFloat(display.value);
+    valor1 = eval(display.value);
     display.value = valor1;
     operador = '';
 }       
@@ -34,6 +37,4 @@ function raizQuadrada(){
     const raiz = document.getElementById('display');
     const resultado = Math.sqrt(display.value);
     display.value = resultado;
-}
-function elevadoA(){
 }
