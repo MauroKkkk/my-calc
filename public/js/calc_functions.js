@@ -1,32 +1,19 @@
-function atualizarDisplay(btn){
-    const display = document.getElementById('display');
-    if(display.value.length === 9) return;
-    if(display.value === '0') display.value = btn.value;
-    else display.value += btn.value;
+function atualizarDisplay(valor){
+    var display = document.getElementById("display");
+    display.value += valor;
 }
 
 function limparDisplay(){
-    document.getElementById('display').value = '0';
-}
-
-var operador = ''
-var valor1 = 0
-function atualizarOperacao(btn){
-    const display = document.getElementById('display');
-    operador = btn.value;
-    valor1 = parseInt(display.value);
-    display.value = '0';
+    document.getElementById('display').value = '';
 }
 
 function calcularOperacao(){
-    const display = document.getElementById('display');
-    const valor2 = parseInt(display.value);
-    valor1 = eval(valor1+operador+valor2);
-    display.value = valor1;
-    operador = '';
-}       
+    var display = document.getElementById("display");
+    document.getElementById("display").value = eval(display.value);
+}
 
-function manipularTeclado(){
-    if(/[0-9]/.test(event.key))
-        atualizarDisplay({value: event.key});
+function raizQuadrada(){
+    const raiz = document.getElementById('display');
+    const resultado = Math.sqrt(display.value);
+    display.value = resultado;
 }
